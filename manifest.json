@@ -1,0 +1,20 @@
+{
+  "name": "Maulana Aditdya",
+  "short_name": "Adit",
+  "lang": "en-US",
+  "start_url": "/pwa/index.html",
+  "display": "standalone",
+  "background_color": "#0000000",
+  "theme_color": "#F7F7F7",
+  "icons": [
+    {
+      "src": "images/favicon1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+    "splash_screen": {
+    "full_screen": true
+  }  
+}

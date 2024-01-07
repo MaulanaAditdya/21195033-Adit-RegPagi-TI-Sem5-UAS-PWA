@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>My Portofolio</title>
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json"> 
+
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="AMI">
+  <meta name="apple-mobile-web-app-title" content="AMI">
+  <meta name="theme-color" content="#F7F7F7">
+  <meta name="msapplication-navbutton-color" content="#F7F7F7">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon1.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="images/favicon1.png">
+  <!-- end manifest pwa -->
+
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet"> -->
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive css -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon1.png">
+
+  <!-- =======================================================
+    Theme Name: Folio
+    Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!-- start section navbar -->
+  <nav id="main-nav">
+    <div class="row">
+      <div class="container">
+
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="#header" class="smoothScroll">Home</a></li>
+          <li><a href="#about" class="smoothScroll">About</a></li>
+          <li><a href="#contact" class="smoothScroll">Coment</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- End section navbar -->
+
+
+  <!-- start section header -->
+  <div id="header" class="home">
+
+    <div class="container">
+      <div class="header-content">
+        <h1>I'm <span class="typed"></span></h1>
+        <main>
+					<div id="notificationContainer">
+					<div class="push">Pus Notifikasi Menggunakan Firebase Message <button class="pencet" id="enableNotifications">🔔 Pencet nyak</button></div>
+					<br />
+					<br />
+					<div>
+					  <div class="token" id="token"></div>
+					  <div id="err"></div>
+					  </div>
+					</div>
+          <ul class="list-unstyled list-social">
+          <li><a href="https://www.facebook.com/maulana.aditdya?mibextid=ZbWKwL" aria-label="Tautan menuju facebook" class="facebook-icon white"><span class="ion-social-facebook" aria-hidden="true"></span></a></li>
+          <li><a href="https://www.instagram.com/maulanaaditdya?igsh=bXRsY29xdGd6amxv" aria-label="Tautan menuju instagram" class="instagram-icon white"><span class="ion-social-instagram" aria-hidden="true"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr class="custom-hr">
+  <!-- End section header -->
+
+
+  <!-- start section about us -->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-4">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img src="images/me1.jpg" class="img-responsive" alt="me">
+            </div>
+          </div>
+        </div>
+        <div class="container-about">
+          <div class="container">
+            <div class="text-center">
+              <div class="main-heading">
+                <h1>Maulana Aditdya</h1>
+                <p>Guru - Tegal, Indonesia</p>
+              </div>
+              <div class="education">
+                <h2>Pendidikan</h2>
+                <p class="yes">SDN Rancawiru 02 (Tahun 2008 - Tahun 2014)</p>
+                <p class="yes">SMP Takhassus Alqur'an Tarub (Tahun 2014 - Tahun 2017)</p>
+                <p class="yes">SMK NU Hasyim Asy'ari Tarub (Tahun 2017 - Tahun 2020)</p>
+              </div>
+              <div class="experience">
+                <h2>Pengalaman Kerja</h2>
+                <p class="yes">Geekfam - Player (Tahun 2020 - Tahun 2021)</p>
+                <p class="yes">RRQ - Player (Tahun 2021 - Tahun 2022)</p>
+              </div>
+              <div class="skills">
+                <h2>Keterampilan</h2>
+                <ul>
+                  <li>Solo lord pakai Estes</li>
+                  <li>Hyper Rafaela</li>
+                  <li>Pristel pakai chou</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  <hr class="custom-hr">
+  
+  
+  
+  <!-- end section about us -->
+
+  <!-- start sectoion contact -->
+  <div id="contact" class="paddsection">
+    <div class="container">
+      <div class="contact-block1">
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="contact-contact">
+
+              <h2 class="mb-30">Alamat</h2>
+
+              <ul class="contact-details">
+                <li><span>Rancawiru 03/03 Pangkah</span></li>
+                <li><span>Tegal, Indonesia</span></li>
+              </ul>
+
+            </div>
+          </div>
+
+          <form class="contactForm">
+            <div class="form-group">
+              <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" data-rule="required" data-msg="Nama tidak boleh kosong" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="komentar" id="komentar" placeholder="Komentar" data-rule="required" data-msg="Komentar tidak boleh kosong"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Kirim</button></div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- start sectoion contact -->
+
+
+  <!-- start section footer -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/maulana.aditdya?mibextid=ZbWKwL" aria-label="Tautan menuju facebook"><span class="ion-social-facebook" aria-hidden="true"></span></a></li>
+          <li><a href="https://www.instagram.com/maulanaaditdya?igsh=bXRsY29xdGd6amxv" aria-label="Tautan menuju instagram"><span class="ion-social-instagram" aria-hidden="true"></span></a></li>
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights Folio. All rights reserved.</p>
+
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
+        -->
+        Designed by <a class="yes" href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- End section footer -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/typed/typed.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    ( function() {
+        if ( 'serviceWorker' in navigator ) {
+          navigator.serviceWorker.register( 'sw.js' ).then( function() {
+            console.log( 'Service Worker Registered' );
+          } );
+        }
+      } )();
+  </script>
+
+<!-- <script>
+  // Minta izin notifikasi
+if ('Notification' in window) {
+  Notification.requestPermission()
+    .then(function (permission) {
+      if (permission === 'granted') {
+        showNotification('Selamat datang!', 'Terima kasih telah menggunakan PWA ini.'); 
+        alert('Terima kasih sudah accept');
+      }
+      else if (permission === 'denied') {
+        // Izin diblokir
+        alert('Bisane diblokir si wir ;(');
+    }
+
+    
+    });
+    
+}
+
+// Fungsi untuk menampilkan notifikasi
+function showNotification(title, message) {
+  if ('Notification' in window && Notification.permission === 'granted') {
+    navigator.serviceWorker.ready.then(function (registration) {
+      registration.showNotification(title, {
+        body: message
+      });
+    });
+  }
+}
+</script> -->
+
+<script src="notif.js"></script>
+
+</body>
+
+</html>
